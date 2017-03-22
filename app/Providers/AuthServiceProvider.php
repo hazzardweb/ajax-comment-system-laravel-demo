@@ -32,8 +32,8 @@ class AuthServiceProvider extends ServiceProvider
          * @param  User $user
          * @return bool
          */
-        // Gate::define('moderate-comments', function ($user) {
-        //     return $user->email === 'demo@example.com';
-        // });
+        \Gate::define('moderate-comments', function ($user) {
+            return $user->email === 'demo@example.com';
+        });
     }
 }
