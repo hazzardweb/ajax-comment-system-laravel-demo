@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Login</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="/auth/login">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -57,10 +57,6 @@
                                 {{-- <a class="btn btn-link" href="#" onclick="loginAsAdmin()">
                                     Login As Admin
                                 </a> --}}
-
-                                {{-- <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a> --}}
                             </div>
                         </div>
                     </form>
@@ -71,7 +67,6 @@
 </div>
 @endsection
 
-@push('scripts.footer')
 {{-- <script>
     function loginAsAdmin() {
         document.getElementById('email').value = 'demo@example.com';
@@ -79,4 +74,3 @@
         document.getElementsByTagName('form')[0].submit();
     }
 </script> --}}
-@endpush
